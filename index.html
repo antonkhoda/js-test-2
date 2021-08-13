@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KR.2 Khoda</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap" id="main-header">
+        <div>
+          <button id="redactor" disabled>
+            <i class="fas fa-code"></i>
+          </button>
+        </div>
+        <div>
+          <button id="b-text" class="border-right">
+            <i class="fas fa-bold"></i>
+          </button>
+          <button id="i-text" class="border-right">
+            <i class="fas fa-italic"></i>
+          </button>
+          <button id="u-text" class="border-right">
+            <i class="fas fa-underline"></i>
+          </button>
+          <button id="s-text"><i class="fas fa-strikethrough"></i></button>
+        </div>
+        <div>
+          <button id="left-text" class="border-right">
+            <i class="fas fa-align-left"></i>
+          </button>
+          <button id="center-text" class="border-right">
+            <i class="fas fa-align-center"></i>
+          </button>
+          <button id="right-text"><i class="fas fa-align-right"></i></button>
+        </div>
+        <div>
+          <select name="font-text" id="font-text" class="border-right"></select>
+          <select name="font-text" id="font-size" class="border-right"></select>
+          <button id="color-text" class="border-right">
+            <i class="fas fa-palette"></i>
+          </button>
+          <button id="bg-text">
+            <i class="fas fa-image"></i>
+          </button>
+        </div>
+        <div>
+          <button id="login">
+            <i class="fas fa-lock" id="lock"></i>
+            <i class="fas fa-lock-open" id="lock-open"></i>
+          </button>
+        </div>
+      </div>
+      <div class="wrap" id="redactor-header">
+        <div>
+          <button id="redactor-save" class="border-right">
+            <i class="fas fa-save"></i>
+          </button>
+          <button id="redactor-table" class="border-right">
+            <i class="fas fa-border-all"></i>
+          </button>
+          <button id="redactor-list-ul" class="border-right">
+            <i class="fas fa-list-ul"></i>
+          </button>
+          <button id="redactor-list-ol">
+            <i class="fas fa-list-ol"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="wrap">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </main>
+
+    <div class="menu-bg" id="menu-font-color">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Choose text color</h1>
+          <i class="far fa-times-circle" id="close-menu-font-color"></i>
+        </div>
+        <div id="palette"></div>
+      </div>
+    </div>
+
+    <div class="menu-bg" id="menu-bg-color">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Choose background color or image</h1>
+          <i class="far fa-times-circle" id="close-menu-bg-color"></i>
+        </div>
+        <div id="menu-bg-items">
+          <span class="menu-bg-item-is-active" id="menu-bg-color-choose"
+            >Color</span
+          >
+          <span id="menu-bg-images">Images</span>
+          <span id="menu-bg-files">Files</span>
+        </div>
+        <div id="menu-bg-palette"></div>
+        <div id="menu-bg-image"></div>
+        <div id="menu-bg-image-link">
+          <input
+            type="text"
+            id="menu-bg-image-link-text"
+            placeholder="Enter the image link..."
+          />
+          <input type="button" value="Enter" id="menu-bg-image-link-enter" />
+          <label for="menu-bg-image-link-brouse">Brouse</label>
+          <input
+            type="file"
+            id="menu-bg-image-link-brouse"
+            accept=".jpg, .jpeg, .png"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-bg" id="menu-registration">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Sing in</h1>
+          <i class="far fa-times-circle" id="close-menu-registration"></i>
+        </div>
+        <div class="menu-body">
+          <input
+            type="text"
+            id="menu-registration-login"
+            placeholder="Enter login..."
+          />
+          <input
+            type="password"
+            id="menu-registration-password"
+            placeholder="Enter password..."
+          />
+          <input type="button" value="Sing in" id="menu-registration-button" />
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap" id="textarea">
+      <textarea name="" id="" cols="30" rows="10"> </textarea>
+    </div>
+
+    <div class="menu-bg" id="menu-table">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Choose text color</h1>
+          <i class="far fa-times-circle" id="close-menu-table"></i>
+        </div>
+        <form id="table">
+          <label for="count-tr">
+            Count TR:
+            <input type="text" id="countTr" placeholder="Type here..." />
+          </label>
+          <label for="count-td">
+            Count td:
+            <input type="text" id="countTd" placeholder="Type here..." />
+          </label>
+          <label for="width-td">
+            Width of TD:
+            <input type="text" id="widthTd" placeholder="Type here..." />
+          </label>
+          <label for="height-td">
+            Height of TD:
+            <input type="text" id="heightTd" placeholder="Type here..." />
+          </label>
+          <label for="count-tr">
+            Width of border:
+            <input
+              type="text"
+              id="widthTableBorder"
+              placeholder="Type here..."
+            />
+          </label>
+          <label for="style-table-border">
+            Style of border:
+            <select name="style-table-border" id="styleTableBorder">
+              <option value="choose style">choose style...</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+            </select>
+          </label>
+          <label for="color-table-border">
+            Color of border:
+            <select name="color-table-border" id="colorTableBorder">
+              <option value="choose style">choose color...</option>
+              <option value="black">black</option>
+              <option value="red">red</option>
+              <option value="green">green</option>
+              <option value="blue">blue</option>
+              <option value="yellow">yellow</option>
+              <option value="white">white</option>
+              <option value="grey">grey</option>
+              <option value="pink">pink</option>
+            </select>
+          </label>
+          <input type="button" value="Reset" class="reset" id="table-reset" />
+          <input
+            type="button"
+            value="Create"
+            class="create"
+            id="table-create"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div class="menu-bg" id="menu-list-ol">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Create Ol</h1>
+          <i class="far fa-times-circle" id="close-menu-list-ol"></i>
+        </div>
+        <form id="listOl">
+          <label for="countLiOl">
+            Count li item:
+            <input type="text" id="countLiOl" placeholder="Type here..." />
+          </label>
+          <label for="styleListOlMark">
+            Type mark of list:
+            <select name="styleListOlMark" id="styleListOlMark">
+              <option value="choose type">choose Ol type mark...</option>
+              <option value="decimal">1 (decimal)</option>
+              <option value="upper-roman">l (upper roman)</option>
+              <option value="lower-roman">i (lower roman)</option>
+              <option value="lower-alpha">A (lower alpha)</option>
+              <option value="upper-alpha">a (upper alpha)</option>
+            </select>
+          </label>
+          <input type="button" value="Reset" class="reset" id="ListOl-reset" />
+          <input
+            type="button"
+            value="Create"
+            class="create"
+            id="ListOl-create"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div class="menu-bg" id="menu-list-ul">
+      <div class="menu">
+        <div class="menu-head">
+          <h1>Create Ul</h1>
+          <i class="far fa-times-circle" id="close-menu-list-ul"></i>
+        </div>
+        <form id="listUl">
+          <label for="countLiUl">
+            Count li item:
+            <input type="text" id="countLiUl" placeholder="Type here..." />
+          </label>
+          <label for="styleListUlMark">
+            Type mark of list:
+            <select name="styleListUlMark" id="styleListUlMark">
+              <option value="choose type">choose Ul type mark...</option>
+              <option value="circle">circle</option>
+              <option value="disc">disc</option>
+              <option value="square">square</option>
+            </select>
+          </label>
+          <input type="button" value="Reset" class="reset" id="ListUl-reset" />
+          <input
+            type="button"
+            value="Create"
+            class="create"
+            id="ListUl-create"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
